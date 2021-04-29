@@ -2,7 +2,7 @@ const generateLetter = () => {
   const inputValue = document.querySelector('#carta-texto').value;
   const spanArray = inputValue.split(' ');
   const text = document.querySelector('#carta-gerada');
-  if (!inputValue) {
+  if (inputValue.trim() === '') {
     text.innerText = 'por favor, digite o conteúdo da carta.';
     return false;
   }
