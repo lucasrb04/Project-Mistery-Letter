@@ -7,6 +7,8 @@ const generateLetter = () => {
     return false;
   }
   text.innerText = '';
+  const contador = document.querySelector('#carta-contador');
+  contador.innerText = spanArray.length;
   spanArray.forEach((word) => {
     const spanElement = document.createElement('span');
     spanElement.innerHTML = word;
