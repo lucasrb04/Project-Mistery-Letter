@@ -1,8 +1,9 @@
 const generateLetter = () => {
   const inputValue = document.querySelector('#carta-texto').value;
   const spanArray = inputValue.split(' ');
+  const text = document.querySelector('#carta-gerada');
+  text.innerText = '';
   spanArray.forEach((word) => {
-    const text = document.querySelector('#carta-gerada');
     const spanElement = document.createElement('span');
     spanElement.innerHTML = word;
     text.appendChild(spanElement);
